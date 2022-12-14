@@ -10,23 +10,24 @@
     <link rel = "stylesheet" href="./asests/font/themify-icons.css">
 </head>
 <body>
-    <div id="main">
-        <div id="header">
+    <div id="main"> 
+        <div  id="header" > 
+
             <!-- begin nav -->
-            <ul id="nav">
+            <ul id="nav"> 
                 <li><a href="#">Home</a></li>
                 <li><a href="#Band">Band</a></li>
                 <li><a href="#Tour">Tour</a></li>
                 <li><a href="#Contact">Contact</a></li>
                 <li>
-                    <a href="">
+                    <a href="#">
                         More
                         <i class="ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="">Merchandise</a></li>
-                        <li><a href="">Extras</a></li>
-                        <li><a href="">Media</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
                     </ul>
                 </li>
             </ul>   
@@ -36,7 +37,7 @@
             <div class="search-btn">
             <i class="search-icon ti-search"></i>
             </div>
-            <div class="mobile-menu-btn ">
+            <div id="mobile-menu" class="mobile-menu-btn">
                 <i class="menu-icon ti-menu"></i>
             </div>
             <!-- end : search buttom  -->
@@ -101,7 +102,7 @@
                     </ul>
                     <!-- places -->
                     <div class="places-list">
-                        <div class="col col-third">
+                        <div class="col col-third s-col-full mt--16">
                             <img src="./asests/img/phucba.jpeg" alt="New York" class="place-img">
                             <div class="place-body">
 
@@ -112,7 +113,7 @@
                             </div>
                         </div>
 
-                        <div class="col col-third">
+                        <div class="col col-third s-col-full mt--16">
                             <img src="./asests/img/phucba.jpeg" alt="New York" class="place-img">
                             <div class="place-body">
 
@@ -123,7 +124,7 @@
                             </div>
                         </div>
 
-                        <div class="col col-third">
+                        <div class="col col-third s-col-full mt--16">
                             <img src="./asests/img/phucba.jpeg" alt="New York" class="place-img">
                             <div class="place-body">
 
@@ -147,12 +148,12 @@
                 <p class="section-sub-heading">fan? drop a not</p>
                 
                 <div class="row contact-content">
-                    <div class="col col-half contact-info ">
+                    <div class="col s-col-full col-half contact-info ">
                         <p><i class="ti-location-pin mt-8"></i>Fukuoka, JP</p>
-                        <p><i class="ti-mobile mt-8" ></i>Phone +09034397240</p>
-                        <p><i class="ti-email mt-8"></i>Email : Khuatbaphuc@gmail.com</p>
+                        <a><a class="ti-mobile mt-8" ><i>Phone : <a href="tel:+09034397240" >09034397240</a></i>
+                        <p><i class="ti-email mt-8"></i>Email : <a href="mailto:khuatbaphuc@gmail.com"> Khuatbaphuc@gmail.com</a></i></p>
                     </div>
-                    <div class="col col-half">
+                    <div class="col s-col-full col-half">
                         <form action="">
                             <div class="row ">
                                 <div class="col col-half">
@@ -200,7 +201,7 @@
         
     
     </div>
-    <div class="modal open js-modal ">
+    <!-- <div class="modal open js-modal ">
         <div class="modal-container">
             <div class="modal-close js-modal-close">
                 <i class="ti-widget-alt"></i>
@@ -258,6 +259,38 @@
 
         // modal.addEventListener('click', hideBuyTickets)
 
+    </script> -->
+    <script>
+      var header = document.getElementById('header')
+      var mobileMenu = document.getElementById('mobile-menu')
+      var headerHeight = header.clientHeight;
+            mobileMenu.onclick = function() {
+            var isClosed = header.clientHeight === headerHeight;
+            if (isClosed){
+                header.style.height = 'auto';
+
+            }else{
+                header.style.height =  null;
+            }
+        }
+         // tu dong dong khi chon menu
+        var menuItems = document.querySelector('#nav li a[href*="#"]')
+        for ( var i = 0; i < menuItems.length; i++){
+            var menuItems = menuItems[i];
+
+            menuItem.onclick = function(event ){
+                var isParentMenu = this.nextElementSibling && menuItem.nextElementSibling.classlist.contains('subnav');
+            
+                if (!isParentMenu) {
+                    header.style.height = null;
+                }else{
+                    
+                }
+                // header.style.height = null;
+            }
+        }
+
+        
     </script>
     
 </body>

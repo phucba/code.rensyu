@@ -22,7 +22,9 @@ html{
     margin-top: 8px;
     
 }
-
+.mt--16{
+    margin-top: 16px;
+}
 .mt-16{
     margin-top: 16px;
     background-color: #000;
@@ -76,14 +78,14 @@ input.form-control{
     right:0;
     right: 0;
     z-index: 1;
-    overflow: hidden;
+    
 
 }
 #nav {
     display: inline-block;
     
 }
-#nav, .subnav{
+#nav .subnav{
     list-style-type: none ;
 }
 #nav > li { 
@@ -134,17 +136,25 @@ input.form-control{
     line-height: 38px;
     
 }
+
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none; 
+}
+
 #header .mobile-menu-btn,
 #header .search-btn{
     color: #FFF;
     font-size: 20px;
 
 }
-#hearder .mobile-menu-btn,
-#hearder .search-btn{
+#header .mobile-menu-btn,
+#header .search-btn{
     float: right;
     padding: 0 21px;
-    cursor: pointer;
+   
     
 }
 #header .mobile-menu-btn:hover{
@@ -155,7 +165,7 @@ input.form-control{
 #header .search-btn:hover{
     background-color: #F44336;
 }
-#header .-icon,
+#header .menu-icon,
 #header .search-icon{
     color:#fff;
     font-size: 20px;
@@ -175,6 +185,8 @@ input.form-control{
     padding-top: 50%;
 
     background: url('/w3_band/asests/img/hinh-anh-gai-xinh-29.jpeg') top center / cover no-repeat;
+    
+    
 }
 #slider .text-heading{
     font-weight: 500;
@@ -290,7 +302,7 @@ background-color: #000;
 
 
 .places-list{
-    margin-top: 32px;
+    margin-top: 16px;
     margin-bottom: 48px;
     
 }
@@ -431,7 +443,6 @@ background-color: #000;
 
 }
 .modal-close {
-    position: absolute;
     position: absolute;
     right: 0;
     /* top: 0; */
