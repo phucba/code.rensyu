@@ -1,0 +1,251 @@
+.header{
+    height: 120px;
+    background-image: linear-gradient(0,#fb5830, #fb5830);
+}
+
+.header__navbar{
+    display: flex;
+    justify-content: space-between;
+}
+.header__navbar-list{
+    list-style: none;
+    padding-left: 0;
+    margin-top: 4px;
+    
+}
+
+.header__navbar-item{
+    position: relative;
+    margin: 0 8px; 
+    min-height: 26px;
+}
+
+.header__navbar--has-qr:hover .headeer__qr{
+    display: block;
+
+}
+/* khi :hover vao thang .header//navbar-item--has-notify thi thang header__notifify hien ra */
+.header__navbar-item--has-notify:hover .header__notifify{
+    display: block;
+}
+
+.header__navbar-item,
+.header__navbar-item-link
+{
+ display: inline-block;
+ font-size: 1.5rem;
+ color: var(--white-color);
+ text-decoration: none;
+ font-weight: 300;
+
+}
+
+
+.header__navbar-item,
+.header__navbar-item-link,
+.header__navbar-icon-link{
+    display: inline-flex;
+    align-items: center;
+
+}
+
+.header__navbar-icon-link:hover,
+.header__navbar-item:hover,
+.header__navbar-item-link:hover{
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+.header__navbar-item--Strong{
+    font-weight: 400;
+}
+
+.header__navbar-item--separate::after{
+    content: "";
+    display: block;
+    position: absolute;
+    border-left:1px solid  #FB9086 ;
+    height: 13px;
+    right: -9px;
+    transform: translateY(-50%);
+    top: 50%;
+}
+.header__navbar-icon-link{
+    color: var(--white-color);
+    text-decoration: none;
+}
+.header__navbar-icon{
+    font-size: 1.8rem;
+    margin: 0 5px;
+}
+.header__navbar-title--no-pointer{
+    cursor: text;
+    color: var(--white-color);
+}
+/* Header QR */
+.headeer__qr{
+    background-color: var(--white-color);
+    width: 186px;
+    position: absolute;
+    left: 0;
+    top: 120%;
+    padding: 8px;
+    border-radius: 2px;
+    display: none;
+    animation: fadeIN ease-in 1s;
+}
+
+.headeer__qr::before{
+    content: "";
+    left: 0;
+    top: -16px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 20px;
+}
+
+.header__qr-img{
+    width: 100%;
+    
+}
+
+.header-qr-app{
+    display: flex;
+    justify-content: space-between;
+
+}
+.header__qr-dowload-img{
+    height: 15px;
+
+}
+.header__qr-link:nth-child(1){
+    margin-left: 11px;
+}
+
+.header__qr-link:nth-child(2){
+    margin-right: 11px;
+}
+/*  Header notification */
+.header__notifify{
+    position: absolute;
+    top: 118%;
+    right: 0;
+    width: 404px;
+    border: 1px solid #D3D3D3;
+    background-color: var(--white-color);
+    cursor: default;
+    transform-origin:   90% top;      /* <--calc(100%-20px ) top; --> */
+    animation: haaderNOtifyGrowth ease-in 0.2s;
+    will-change: opacity, transform;
+    display: none;
+
+}
+/* phan nay phan tam giac chua clear video Css phan 3 phut thu 7 */
+.header__notifify::before{
+    content: "";
+    border-width:20px 27px  ;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    right: 0px;
+    top: -30px;
+    position: absolute;
+
+}
+/* the ::after la gi  */
+.header__notifify::after{
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -16px;
+    width: 90px;
+    height: 20px;
+    
+}
+/* keyframes la gi  */
+@keyframes haaderNOtifyGrowth{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }to{
+        opacity: 1;
+        transform: scale(1) ;
+    }
+}
+
+.header__notify-header{
+    height: 40px;
+    background-color: var(--white-color);
+
+}
+.header__notify-header h3{
+    color: #999;
+    line-height: 40px;
+    margin: 0 0 0 12px;
+    font-weight: 400px;
+    font-size: 1.4rem;
+    user-select: none;
+}
+
+
+.header__notifify-list{
+
+    padding-left: 0;
+}
+.header__notifify-item{
+
+    
+}
+.header__notifify-item:hover{
+    background-color: #F1F1f1;
+}
+
+.header__notifify-item--veiwed{
+    background-color: rgba(238, 75, 43, 0.08);
+}
+.header__notifify-link{
+    display:flex;
+    width: 100%;
+    padding: 12px;
+    text-decoration: none;
+    
+}
+/* thuoc tinh object-fit chua clear */
+.header__notifify-img{
+    width: 48px;
+    object-fit: contain;
+}
+
+.header__notify-info{
+ padding-left: 12px ;
+}
+
+.header__notifify-name{
+    display: block;
+    font-size: 1.4remx;
+    color: var( --text-color);
+    font-weight: 400;
+    line-height: 1.8rem;
+}
+.header__notifify-descrition{
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: #756F6E;
+    margin-top: 4px;
+}
+
+.header__notify-footer{
+   display: flex;
+}
+
+.header__notify-footer-btn{
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 8px 48px;
+    margin: auto;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
