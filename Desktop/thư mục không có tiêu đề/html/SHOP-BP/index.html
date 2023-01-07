@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="/SHOP-BP/assets/CSS/main.css">
-    <link rel="stylesheet" href="/SHOP-BP/assets/CSS/base.css">
+    <link rel="stylesheet" href="./assets/CSS/base.css">
+    <link rel="stylesheet" href="./assets/CSS/main.css">
     <link rel="stylesheet" href="./assets/fonts/Roboto-Italic.ttf">
     <link rel="stylesheet" href="./assets/fontawesome-free-6.2.1-web/css/all.min.css">
 </head>
@@ -24,7 +24,7 @@
                             Cua hang ket Noi cua Phuc
 
                             <!-- header QR code -->
-                            <div class="headeer__qr">
+                            <div class="header__qr">
                                 <img src="./assets/img/QR code.png" alt="QR code" class="header__qr-img">
                                 <div class="header-qr-app">
                                     <a href="" class="header__qr-link">
@@ -37,13 +37,34 @@
                              </div>
                         </li>
                         <li class="header__navbar-item">
-                           <span class="header__navbar-title--no-pointer">  Ket noi</span>
-                            <a href="" class="header__navbar-icon-link">
+                           <span class="header__navbar-title--no-pointer"> Ket noi</span>
+                            <a href="https://www.facebook.com/khuatbaphuc" class="header__navbar-icon-link">
                                 <i class="header__navbar-icon fa-brands fa-facebook"></i>
                             </a>
                             <a href="" class="header__navbar-icon-link">
                                 <i class="header__navbar-icon fa-brands fa-instagram"></i>
                             </a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <div class="header__search-item">
+                                <input type="text" class="header__search-input" placeholder="Search product">
+                                
+                               <!-- Search History -->
+                                <div class="header__search-history">
+                                    <h3 class="header__search-history-heading">Search History</h3>
+                                    <ul class="header__search-history-list">
+                                        <li class="header__search-history-item">
+                                            <a href="">Cream</a>
+                                        </li>
+                                        <li class="header__search-history-item">
+                                            <a href="">Just</a>
+                                        </li>
+                                        <li class="header__search-history-item">
+                                            <a href="">Apple</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                     <ul class="header__navbar-list">
@@ -99,28 +120,926 @@
                                 
                             </a>
                          </li>
-                         <li class="header__navbar-item header__navbar-item--Strong">
+                         <!-- <li class="header__navbar-item header__navbar-item--Strong">
                             <a href="" class="header__navbar-item-link header__navbar-item--separate" >Dang ky </a>
                          </li>
     
                          <li class="header__navbar-item header__navbar-item--Strong">
                             <a href="" class="header__navbar-item-link" >Dang Nhap</a>
                          </li>
-    
+                         -->
+                        <li class="header__navbar-item header__navbar-user" >
+                            <img src="./assets/img/phucba.jpeg" alt="" class="header__navbar-user-img">
+                            <span class="header__navbar-user-name">Phuc Ba</span>
+                            <ul class="header__navbar-user-menu">
+                                <li class="header__navbar-user-item">
+                                    <a href="">Tai khoan cua toi</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="">Hello Phuc</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="">HI Phuc</a>
+                                </li>
+                                <li class="header__navbar-user-item header__navbar-user-item--separate">
+                                    <a href="">Log out </a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
+                <!--  Header with search -->
+                <div class="header-with-search">
+                    <div class="header__logo">
+                       <a href="https://shopee.jp/" class="header__logo-nameshop"> Shop Phuc</a>
+                        <i class="header__logo-shop fa-solid fa-shop  " ></i>
+                    </div>
+
+                    <div class="header__search">
+                        <div class="header__search-input-wrap">
+                            <input type="text" class="header__search-input" placeholder="Search product">
+                            
+                           <!-- Search History -->
+                            <div class="header__search-history">
+                                <h3 class="header__search-history-heading">Search History</h3>
+                                <ul class="header__search-history-list">
+                                    <li class="header__search-history-item">
+                                        <a href="">Cream</a>
+                                    </li>
+                                    <li class="header__search-history-item">
+                                        <a href="">Just</a>
+                                    </li>
+                                    <li class="header__search-history-item">
+                                        <a href="">Apple</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header__search-selection">
+                            <span class="header__search-selection-lable">In Shop
+                                <i class=" header__search-selection-icon fa-solid fa-chevron-down"></i>
+                                <ul class="header__search-option">
+                                    <li class="header__search-option-item eader__search-option-item-active">
+                                        <span>In Shop</span>
+                                        <i class="fa-solid fa-check"></i>
+                                    </li>
+                                    <li class="header__search-option-item  ">
+                                        <span>Out Shop</span>
+                                        <i class="fa-solid fa-check"></i>
+                                    </li>
+                                </ul>
+                             </span>  
+                        </div>
+                        <button class="header__search-btn">
+                            <i class="header__search-btn-icon  fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+
+                    <!-- cart layout -->
+                    <div class="header__cart">
+                        <div class="header__cart-wrap">
+                            <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+                            <span class="header__cart-notive">3</span>
+                            <!-- no cart : header__cart--no-cart  -->
+                            <div class="header__cart-list  " >
+                             <img src="./assets/img/phucba.jpeg" alt="" class="header__cart-no-cart-img">
+                            <span class="header__cart-list-no-cart-mgs">
+                                 no cart
+                            </span>
+                            
+                             <h4 class="header__cart-heading">product has more</h4>
+                             <ul class="header__cart-list-item">
+                                <!--  cart item  -->
+                                    <li class="header__cart-item">
+                                        <img src="./assets/img/phucba.jpeg" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-infor">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Eat Cream</h5>
+                                               <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">2000$</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-qnt">2</span>
+                                               </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    phan loai : bac
+                                                </span>
+                                                <span class="header__cart-item-remove">delete</span>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="./assets/img/phucba.jpeg" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-infor">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Eat Cream</h5>
+                                               <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">2000$</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-qnt">2</span>
+                                               </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    phan loai : bac
+                                                </span>
+                                                <span class="header__cart-item-remove">delete</span>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="./assets/img/phucba.jpeg" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-infor">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Eat Cream</h5>
+                                               <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">2000$</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-qnt">2</span>
+                                               </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    phan loai : bac
+                                                </span>
+                                                <span class="header__cart-item-remove">delete</span>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                             </ul>
+                            
+                             <button class="header__cart-view-cart btn btn--primary"> See cart </button>
+                        </div>
+
+                      
+                    </div>
+                    </div>
+                </div>
             </div>
         </div>
 
 
-        <div class="container">
+        <div class="app__container">
+            <div class="gird">
+                <div class="gird__row app__content">
+                    <div class="gird__column2">
+                        
+                        <nav class="category">
+                            <h3 class="category__heading">
+                                <i class="category__heading-icon fa-solid fa-list"></i>
+                                Danh muc
+                            </h3>
+                            <ul class="category-list">
+                                <li class="category-item category-item--active">
+                                    <a href="" class="category-item__link">Trang diem mat</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="" class="category-item__link">Trang diem moi</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="" class="category-item__link">Trang diem mat</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="gird__column10">
+                        <div class="home-filter">
+                            <span class="home-filter__lable">Sap xem theo </span>
+                            <botton class="home-filter__btn btn">Pho bien</botton>
+                            <botton class="home-filter__btn btn--primary btn">Moi Nhat</botton>
+                            <botton class="home-filter__btn btn">Ban Chay</botton>
 
+                            <div class="select-input">
+                                <span class="select-input__label">Gia</span>
+                                <i class="select-input__icon fas fa-angle-down"></i>
+                                <ul class="select-input-list">
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Gia thap den cao </a>
+                                    </li>
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Gia cao den thap </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="home-filter__page">
+                                <span class="home-filter__page-num">
+                                    <span class=" home-filter__page-current">1</span>/14
+                                </span>
+                            </div>
+                            <div class="home-filter__page-control">
+                                <a href="" class="home-filter__page-btn home-filter__page-btn--disabled">
+                                    <i class="home-filter__page-icon fas fa-angle-left"></i>
+                                </a>
+                                <a href="" class="home-filter__page-btn">
+                                    <i class="home-filter__page-icon fas fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="home-product">
+                            <div class="gird__row">
+                                <div class="gird__column-2">
+                                    <!-- Product item  -->
+                                        <a  class="home-product-item" href="#">
+                                            <div class="home-product-item__img">
+                                                <!-- style="background-image: url()"; -->
+                                                <img src="./assets/img/phucba.jpeg" alt="" class="home-product-item__image">
+                                            </div>
+                                                <h4 class="home-product-item__name">Helo xin chao phuc </h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item-price-old">1.200.000$</span>
+                                                <span class="home-product-item-price-current">0.001$</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class=" home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__heart-icon-no-like far fa-heart"></i>
+                                                    <i class="home-product-item__heart-fill fas fa-heart"></i>
+    
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+    
+                                                </div>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <span class="home-product-item__origin-name">Japan</span>
+    
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                               <span>
+                                                    <i class="fas fa-check"></i>
+                                                    Yeu thich
+                                               </span>
+                                            </div>
+                                            <div class="home-product-item-off">
+                                                <span class="home-product-item__sale-off-percent">100%</span>
+                                                <span class="home-product-item__sale-off-label">OFF</span>
+                                            </div>
+                                            
+                                        </a>
+                                        <a  class="home-product-item" href="#">
+                                            <div class="home-product-item__img">
+                                                <!-- style="background-image: url()"; -->
+                                                <img src="./assets/img/119096899_1671107836392030_5006219933416899472_n.jpeg" alt="" class="home-product-item__image">
+                                            </div>
+                                                <h4 class="home-product-item__name">Helo xin chao phuc </h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item-price-old">1.200.000$</span>
+                                                <span class="home-product-item-price-current">0.001$</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class=" home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__heart-icon-no-like far fa-heart"></i>
+                                                    <i class="home-product-item__heart-fill fas fa-heart"></i>
+    
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+    
+                                                </div>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <span class="home-product-item__origin-name">Japan</span>
+    
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                               <span>
+                                                    <i class="fas fa-check"></i>
+                                                    Yeu thich
+                                               </span>
+                                            </div>
+                                            <div class="home-product-item-off">
+                                                <span class="home-product-item__sale-off-percent">100%</span>
+                                                <span class="home-product-item__sale-off-label">OFF</span>
+                                            </div>
+                                            
+                                        </a>
+                                        <a  class="home-product-item" href="#">
+                                            <div class="home-product-item__img">
+                                                <!-- style="background-image: url()"; -->
+                                                <img src="./assets/img/phucba.jpeg" alt="" class="home-product-item__image">
+                                            </div>
+                                                <h4 class="home-product-item__name">Helo xin chao phuc </h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item-price-old">1.200.000$</span>
+                                                <span class="home-product-item-price-current">0.001$</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class=" home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__heart-icon-no-like far fa-heart"></i>
+                                                    <i class="home-product-item__heart-fill fas fa-heart"></i>
+    
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+    
+                                                </div>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <span class="home-product-item__origin-name">Japan</span>
+    
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                               <span>
+                                                    <i class="fas fa-check"></i>
+                                                    Yeu thich
+                                               </span>
+                                            </div>
+                                            <div class="home-product-item-off">
+                                                <span class="home-product-item__sale-off-percent">100%</span>
+                                                <span class="home-product-item__sale-off-label">OFF</span>
+                                            </div>
+                                            
+                                        </a>
+                                        <a  class="home-product-item" href="#">
+                                            <div class="home-product-item__img">
+                                                <!-- style="background-image: url()"; -->
+                                                <img src="./assets/img/119096899_1671107836392030_5006219933416899472_n.jpeg" alt="" class="home-product-item__image">
+                                            </div>
+                                                <h4 class="home-product-item__name">Helo xin chao phuc </h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item-price-old">1.200.000$</span>
+                                                <span class="home-product-item-price-current">0.001$</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class=" home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__heart-icon-no-like far fa-heart"></i>
+                                                    <i class="home-product-item__heart-fill fas fa-heart"></i>
+    
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+    
+                                                </div>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <span class="home-product-item__origin-name">Japan</span>
+    
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                               <span>
+                                                    <i class="fas fa-check"></i>
+                                                    Yeu thich
+                                               </span>
+                                            </div>
+                                            <div class="home-product-item-off">
+                                                <span class="home-product-item__sale-off-percent">100%</span>
+                                                <span class="home-product-item__sale-off-label">OFF</span>
+                                            </div>
+                                            
+                                        </a>
+                                        <a  class="home-product-item" href="#">
+                                            <div class="home-product-item__img">
+                                                <!-- style="background-image: url()"; -->
+                                                <img src="./assets/img/phucba.jpeg" alt="" class="home-product-item__image">
+                                            </div>
+                                                <h4 class="home-product-item__name">Helo xin chao phuc </h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item-price-old">1.200.000$</span>
+                                                <span class="home-product-item-price-current">0.001$</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class=" home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__heart-icon-no-like far fa-heart"></i>
+                                                    <i class="home-product-item__heart-fill fas fa-heart"></i>
+    
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+    
+                                                </div>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <span class="home-product-item__origin-name">Japan</span>
+    
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                               <span>
+                                                    <i class="fas fa-check"></i>
+                                                    Yeu thich
+                                               </span>
+                                            </div>
+                                            <div class="home-product-item-off">
+                                                <span class="home-product-item__sale-off-percent">100%</span>
+                                                <span class="home-product-item__sale-off-label">OFF</span>
+                                            </div>
+                                            
+                                        </a>  
+                                </div>
+                            </div>  
+                            <div class="gird__row">
+                                <div class="gird__column-2">
+                                    <!-- Product item  -->
+                                        <a  class="home-product-item" href="#">
+                                            <div class="home-product-item__img">
+                                                <!-- style="background-image: url()"; -->
+                                                <img src="./assets/img/119096899_1671107836392030_5006219933416899472_n.jpeg" alt="" class="home-product-item__image">
+                                            </div>
+                                                <h4 class="home-product-item__name">Helo xin chao phuc </h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item-price-old">1.200.000$</span>
+                                                <span class="home-product-item-price-current">0.001$</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class=" home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__heart-icon-no-like far fa-heart"></i>
+                                                    <i class="home-product-item__heart-fill fas fa-heart"></i>
+    
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+    
+                                                </div>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <span class="home-product-item__origin-name">Japan</span>
+    
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                               <span>
+                                                    <i class="fas fa-check"></i>
+                                                    Yeu thich
+                                               </span>
+                                            </div>
+                                            <div class="home-product-item-off">
+                                                <span class="home-product-item__sale-off-percent">100%</span>
+                                                <span class="home-product-item__sale-off-label">OFF</span>
+                                            </div>
+                                            
+                                        </a>
+                                        <a  class="home-product-item" href="#">
+                                            <div class="home-product-item__img">
+                                                <!-- style="background-image: url()"; -->
+                                                <img src="./assets/img/119096899_1671107836392030_5006219933416899472_n.jpeg" alt="" class="home-product-item__image">
+                                            </div>
+                                                <h4 class="home-product-item__name">Helo xin chao phuc </h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item-price-old">1.200.000$</span>
+                                                <span class="home-product-item-price-current">0.001$</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class=" home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__heart-icon-no-like far fa-heart"></i>
+                                                    <i class="home-product-item__heart-fill fas fa-heart"></i>
+    
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+    
+                                                </div>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <span class="home-product-item__origin-name">Japan</span>
+    
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                               <span>
+                                                    <i class="fas fa-check"></i>
+                                                    Yeu thich
+                                               </span>
+                                            </div>
+                                            <div class="home-product-item-off">
+                                                <span class="home-product-item__sale-off-percent">100%</span>
+                                                <span class="home-product-item__sale-off-label">OFF</span>
+                                            </div>
+                                            
+                                        </a>
+                                        <a  class="home-product-item" href="#">
+                                            <div class="home-product-item__img">
+                                                <!-- style="background-image: url()"; -->
+                                                <img src="./assets/img/119096899_1671107836392030_5006219933416899472_n.jpeg" alt="" class="home-product-item__image">
+                                            </div>
+                                                <h4 class="home-product-item__name">Helo xin chao phuc </h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item-price-old">1.200.000$</span>
+                                                <span class="home-product-item-price-current">0.001$</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class=" home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__heart-icon-no-like far fa-heart"></i>
+                                                    <i class="home-product-item__heart-fill fas fa-heart"></i>
+    
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+    
+                                                </div>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <span class="home-product-item__origin-name">Japan</span>
+    
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                               <span>
+                                                    <i class="fas fa-check"></i>
+                                                    Yeu thich
+                                               </span>
+                                            </div>
+                                            <div class="home-product-item-off">
+                                                <span class="home-product-item__sale-off-percent">100%</span>
+                                                <span class="home-product-item__sale-off-label">OFF</span>
+                                            </div>
+                                            
+                                        </a>
+                                        <a  class="home-product-item" href="#">
+                                            <div class="home-product-item__img">
+                                                <!-- style="background-image: url()"; -->
+                                                <img src="./assets/img/119096899_1671107836392030_5006219933416899472_n.jpeg" alt="" class="home-product-item__image">
+                                            </div>
+                                                <h4 class="home-product-item__name">Helo xin chao phuc </h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item-price-old">1.200.000$</span>
+                                                <span class="home-product-item-price-current">0.001$</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class=" home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__heart-icon-no-like far fa-heart"></i>
+                                                    <i class="home-product-item__heart-fill fas fa-heart"></i>
+    
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+    
+                                                </div>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <span class="home-product-item__origin-name">Japan</span>
+    
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                               <span>
+                                                    <i class="fas fa-check"></i>
+                                                    Yeu thich
+                                               </span>
+                                            </div>
+                                            <div class="home-product-item-off">
+                                                <span class="home-product-item__sale-off-percent">100%</span>
+                                                <span class="home-product-item__sale-off-label">OFF</span>
+                                            </div>
+                                            
+                                        </a>
+                                        <a  class="home-product-item" href="#">
+                                            <div class="home-product-item__img">
+                                                <!-- style="background-image: url()"; -->
+                                                <img src="./assets/img/119096899_1671107836392030_5006219933416899472_n.jpeg" alt="" class="home-product-item__image">
+                                            </div>
+                                                <h4 class="home-product-item__name">Helo xin chao phuc </h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item-price-old">1.200.000$</span>
+                                                <span class="home-product-item-price-current">0.001$</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class=" home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__heart-icon-no-like far fa-heart"></i>
+                                                    <i class="home-product-item__heart-fill fas fa-heart"></i>
+    
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+                                                    <i class="home-product-item__star fas fa-star"></i>
+    
+                                                </div>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <span class="home-product-item__origin-name">Japan</span>
+    
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                               <span>
+                                                    <i class="fas fa-check"></i>
+                                                    Yeu thich
+                                               </span>
+                                            </div>
+                                            <div class="home-product-item-off">
+                                                <span class="home-product-item__sale-off-percent">100%</span>
+                                                <span class="home-product-item__sale-off-label">OFF</span>
+                                            </div>
+                                            
+                                        </a>  
+                                </div>
+                            </div>  
+                            
+                           
+                        </div>
+
+                        <ul class="pagination home-product__pagination ">
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">
+                                    <i class="pagination-item__icon fas fa-angle-left" ></i>
+                                </a>
+                            </li>
+
+                            <li class="pagination-item pagination-item--active">
+                                <a href="" class="pagination-item__link"> 1 </a>
+                            </li>
+
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link"> 2 </a>
+                            </li>
+
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link"> 3 </a>
+                            </li>
+
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link"> 4 </a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link"> ... </a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link"> 50 </a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">
+                                    <i class="pagination-item__icon fas fa-angle-right" ></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
         </div>
 
 
+        
         <div class="footer">
+            <div class="gird">
+                <div class="gird__row">
+                    <div class="gird__column-2-4">
+                        <h3 class="footer__heading">Cham soc khach hang </h3>
+                        <ul class="footer__list-item">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Trung tam tro giup </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Trung tam tro giup </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Trung tam tro giup </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gird__column-2-4">
+                        <h3 class="footer__heading">Gioi Thieu </h3>
+                        <ul class="footer__list-item">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Trung tam tro giup </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Trung tam tro giup </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Trung tam tro giup </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gird__column-2-4">
+                        <h3 class="footer__heading">Danh mmuc</h3>
+                        <ul class="footer__list-item">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Trung tam tro giup </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Trung tam tro giup </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Trung tam tro giup </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gird__column-2-4">
+                        <h3 class="footer__heading">Theo doi </h3>
+                        <ul class="footer__list-item">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fab fa-facebook"></i>
+                                    Facebook
+
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fab fa-instagram"></i>
+                                    Instagram
+                                 </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fab fa-linkedin"></i>
+                                    Linkedin
+                                 </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gird__column-2-4">
+                        <h3 class="footer__heading">Vao cua hang tren ung dung  </h3>
+                        <div class="footer__download">
+                            <img src="/SHOP-BP/assets/img/QR%20code.png" alt="" class="footer__dowload-qr">
+                            <div class="footer__dowload-apps">
+                                <a href="" class="footer__dowload-app-link">
+                                    <img src="/SHOP-BP/assets/img/qr-googleplay.png" alt="" class="footer__dowload-google-icon">
+
+                                </a>
+                                <a href="" class="footer__dowload-app-link">
+                                    <img src="/SHOP-BP/assets/img/qr-app.png" alt="" class="footer__dowload-app-icon">
+
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="gird__row">
+                <div class="gird">
+
+                    <div class="footer__botton">
+    
+                        <p class="text__botton">2022 - Coppyright PhucBa</p>
+                    </div>
+                </div>
+            </div>
+
 
         </div>
+
+        <!-- modal layour -->
+        <!-- <div class="modal">
+            <div class="modal__overlay">
+
+            </div>
+            <div class="modal__body">
+             -->
+                <!-- Register form  -->
+                <!-- <div class="auth-form">
+                    <div class="auth-form__container">
+                        <div class="auth-form__header">
+                            <h3 class="auth-form__heading">Register</h3>
+                            <span class="auth-form__switch-btn">
+                                Log in
+
+                            </span>
+                        </div>
+                        <div class="auth-form__form">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Email cua ban ">
+                                
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Password cua  ban">
+                                
+                            </div>
+                            
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Password mat khau ">
+                                
+                            </div>
+                            <div class="auth-form__aside">
+                                <p class="auth-form__policy-text">what do this mean? 
+                                    <a href="" class="auth-form__text-link">  ve dieu khoan dich vu </a> &
+                                    <a href="" class="auth-form__text-link">  Chinh sach bao mat </a>
+                                </p>
+                            </div>
+                            <div class="auth-porm__controls">
+                                <button class="btn btn--noverl auth-porm__controls-back">Tro Lai </button>
+                                <button class="btn btn--primary">Dang ky </button>
+                            </div>
+                    </div>
+                
+                        <div class="auth-form__cocials">
+                            <a href="" class="auth-form__cocials-facebook btn btn--size-s btn-with-icon">
+                                <i class="auth-form__cocials-icon fab fa-facebook-square"></i>
+                                <span class="auth-form__cocials-title">
+                                    ket noi voi facebook
+                                </span>  
+                            </a>
+                            <a href="" class="auth-form__cocials-google btn btn--size-s btn-with-icon">
+                                <i class="auth-form__cocials-icon fab fa-google"></i>
+                                <span1 class="auth-form__cocials-title">
+                                    ket noi voi google
+                                </span1>  
+
+                            </a>
+                        </div>
+                        
+                    </div>
+
+                </div> -->
+
+               <!-- Login form  -->
+               <!-- <div class="auth-form">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Log in</h3>
+                        <span class="auth-form__switch-btn">
+                            Register
+
+                        </span>
+                    </div>
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Email cua ban ">
+                            
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Password cua  ban">
+                            
+                        </div>
+                        
+                        <div class="auth-form__aside">
+                            <div class="auth-form__help">
+                                <a href="" class="auth-form__help-link auth-form__help-forgot">Quen mat khau</a>
+                                <span class="auth-form__help-separate"></span>
+
+                            
+                                <a href="" class="auth-form__help-link">Can tro giup</a>
+
+                            </div>
+                        </div>
+                        <div class="auth-porm__controls">
+                            <button class="btn btn--noverl auth-porm__controls-back">Tro Lai </button>
+                            <button class="btn btn--primary">Dang ky </button>
+                        </div>
+                </div>
+            
+                    <div class="auth-form__cocials">
+                        <a href="" class="auth-form__cocials-facebook btn btn--size-s btn-with-icon">
+                            <i class="auth-form__cocials-icon fab fa-facebook-square"></i>
+                            <span class="auth-form__cocials-title">
+                                ket noi voi facebook
+                            </span>  
+                        </a>
+                        <a href="" class="auth-form__cocials-google btn btn--size-s btn-with-icon">
+                            <i class="auth-form__cocials-icon fab fa-google"></i>
+                            <span1 class="auth-form__cocials-title">
+                                ket noi voi google
+                            </span1>  
+
+                        </a>
+                    </div>
+                    
+                </div>
+
+            </div>
+            </div>
+        </div> -->
     </div>
 </body>
 </html>
